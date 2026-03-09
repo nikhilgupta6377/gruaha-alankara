@@ -1,0 +1,8 @@
+{
+  "name": "Interior Design AI",
+  "description": "AI-powered interior design platform with AR visualization, smart assistant, and furniture booking.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

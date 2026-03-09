@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user account information and preferences.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique identifier for the user." },
+        "displayName": { "type": "string", "description": "User's full name." },
+        "email": { "type": "string", "format": "email", "description": "User's email address." },
+        "photoURL": { "type": "string", "description": "URL to the user's profile picture." },
+        "role": { "type": "string", "enum": ["user", "admin"], "description": "User's role in the system." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the profile was created." }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "DesignHistory": {
+      "title": "Design History",
+      "description": "Stores AI-generated design recommendations for users.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Owner's UID." },
+        "style": { "type": "string", "description": "Design style requested." },
+        "recommendations": { "type": "array", "description": "List of AI recommendations." },
+        "imageBase64": { "type": "string", "description": "Base64 encoded image or thumbnail." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the design was generated." }
+      },
+      "required": ["uid", "style", "recommendations", "createdAt"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Stores furniture booking information.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "User who booked the furniture." },
+        "furnitureId": { "type": "string", "description": "ID of the furniture." },
+        "furnitureName": { "type": "string", "description": "Name of the furniture." },
+        "price": { "type": "number", "description": "Price at time of booking." },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "cancelled"], "description": "Booking status." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the booking was made." }
+      },
+      "required": ["uid", "furnitureId", "furnitureName", "price", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile documents."
+    },
+    "/history/{historyId}": {
+      "schema": "DesignHistory",
+      "description": "User design history."
+    },
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "User furniture bookings."
+    }
+  }
+}
