@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a href="#" className="text-white/40 hover:text-accent transition-colors"><Facebook size={20} /></a>
               <a href="#" className="text-white/40 hover:text-accent transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-white/40 hover:text-accent transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.instagram.com/gruhaalankara_26?igsh=MTVmZzRpeXZoaWg0Nw==" className="text-white/40 hover:text-accent transition-colors"><Instagram size={20} /></a>
             </div>
           </div>
 
@@ -50,15 +50,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-accent shrink-0" />
-                <span className="text-white/50 text-sm">123 Design Street, Creative Hub, Bangalore, India</span>
+                <span className="text-white/50 text-sm">jabalpur ,India</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-accent shrink-0" />
-                <span className="text-white/50 text-sm">+91 98765 43210</span>
+                <span className="text-white/50 text-sm">+91-************</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-accent shrink-0" />
-                <span className="text-white/50 text-sm">hello@gruhaalankara.com</span>
+                <span className="text-white/50 text-sm">gruhaalankara@gmail.com</span>
               </li>
             </ul>
           </div>
